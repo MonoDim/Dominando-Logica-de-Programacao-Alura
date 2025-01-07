@@ -1,4 +1,6 @@
-﻿class Album
+﻿namespace OuvirMusga.Modelos;
+
+class Album
 {
     private List<Musica> musicas = new List<Musica>();
 
