@@ -1,9 +1,11 @@
 ﻿using OuvirMusga.Modelos;
 
+
+
 Banda Ira = new Banda("Ira!");
-Ira.AdicionarNota(10);
-Ira.AdicionarNota(7);
-Ira.AdicionarNota(8);
+Ira.AdicionarNota(new Avaliacao(10));
+Ira.AdicionarNota(new Avaliacao(7));
+Ira.AdicionarNota(new Avaliacao(8));
 Banda LegiaoUrbana = new("Legião Urbana");
 
 Dictionary<string, Banda> bandasRegistradas = new();
@@ -143,9 +145,9 @@ void AvaliarUmaBanda()
     {
         Banda banda = bandasRegistradas[nomeDaBanda];
         Console.Write($"Qual a nota que a banda {nomeDaBanda} merece: ");
-        int nota = int.Parse(Console.ReadLine()!);
+        Avaliacao nota = Avaliacao.Parse(Console.ReadLine()!);
         banda.AdicionarNota(nota);
-        Console.WriteLine($"\nA nota {nota} foi registrada com sucesso para a banda {nomeDaBanda}");
+        Console.WriteLine($"\nA nota {nota.Nota} foi registrada com sucesso para a banda {nomeDaBanda}");
         Thread.Sleep(2000);
         Console.Clear();
         ExibirOpcoesDoMenu();
