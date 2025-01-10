@@ -1,4 +1,6 @@
-﻿namespace OuvirMusga.Menus;
+﻿using OuvirMusga.Modelos;
+
+namespace OuvirMusga.Menus;
 
 internal class Menu
 {
@@ -10,4 +12,10 @@ internal class Menu
         Console.WriteLine($"={titulo}=");
         Console.WriteLine(asteriscos + "\n");
     }
+
+    public virtual void Executar(Dictionary<string, Banda> bandasRegistradas)
+    {
+        Console.Clear();
+    }
+
 }
