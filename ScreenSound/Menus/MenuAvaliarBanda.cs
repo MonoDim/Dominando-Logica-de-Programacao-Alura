@@ -1,7 +1,6 @@
 ﻿using OuvirMusga.Modelos;
 
 namespace OuvirMusga.Menus;
-
 internal class MenuAvaliarBanda : Menu
 {
     public override void Executar(Dictionary<string, Banda> bandasRegistradas)
